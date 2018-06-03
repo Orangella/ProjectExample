@@ -46,15 +46,15 @@
 
 ```
 def persons_position(text): 
-  wall = str(results[current_result][RFROM_ID]) + '_' + str(results[current_result][RID]) 
-  result = [] 
-  text = text.lower() 
-  search_str = '\\[id[\d]*\\|([\w\s\\-(\)]*)\\]' 
-  reg = re.compile(search_str) 
-  for n in re.finditer(reg, text): 
-  result.append([n.start(1), n.end(1)]) 
-  reg = re.compile(wall) 
-  for n in re.finditer(reg, text): 
-  result.append([n.regs[0][0], n.regs[0][1]]) 
-  result.sort(key=lambda elem: int(elem[0])) 
-  return result```
+    wall = str(results[current_result][RFROM_ID]) + '_' + str(results[current_result][RID]) 
+    result = [] 
+    text = text.lower() 
+    search_str = '\\[id[\d]*\\|([\w\s\\-(\)]*)\\]' 
+    reg = re.compile(search_str) 
+    for n in re.finditer(reg, text): 
+       result.append([n.start(1), n.end(1)]) 
+    reg = re.compile(wall) 
+    for n in re.finditer(reg, text): 
+       result.append([n.regs[0][0], n.regs[0][1]]) 
+    result.sort(key=lambda elem: int(elem[0])) 
+    return result```
