@@ -46,7 +46,8 @@
 
 ```
 def persons_position(text): 
-    wall = str(results[current_result][RFROM_ID]) + '_' + str(results[current_result][RID]) 
+    wall = str(results[current_result][RFROM_ID]) + '_' + 
+            str(results[current_result][RID]) 
     result = [] 
     text = text.lower() 
     search_str = '\\[id[\d]*\\|([\w\s\\-(\)]*)\\]' 
