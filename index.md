@@ -41,10 +41,10 @@
 База данных ![bd](https://orangella.github.io/ProjectExample/bd.png) 
 
 Пример: функция, производящая в тексте поиск 
-- фраз вида [ id123456 | Павел Иванов]
+- фраз вида `[id123456|Павел Иванов]`
 - адреса текущего конкурса 
 
-```
+``
 def persons_position(text): 
     wall = str(results[current_result][RFROM_ID]) + '_' + str(results[current_result][RID]) 
     result = [] 
@@ -57,4 +57,4 @@ def persons_position(text):
     for n in re.finditer(reg, text): 
        result.append([n.regs[0][0], n.regs[0][1]]) 
     result.sort(key=lambda elem: int(elem[0])) 
-    return result```
+    return result``
