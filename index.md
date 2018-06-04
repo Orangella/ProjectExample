@@ -45,7 +45,7 @@
 - адреса текущего конкурса 
 
 ```
-def persons_position(text): 
+def persons_and_wall_positions(text): 
     wall = str(results[current_result][RFROM_ID]) + '_' + 
             str(results[current_result][RID]) 
     result = [] 
